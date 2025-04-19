@@ -1,3 +1,4 @@
+//https://www.codechef.com/problems/DIVSUBS?tab=statement
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -23,7 +24,9 @@ public class Main
 	        for(int i=0;i<n;i++) prefSum[i]=prefSum[i]%n;
 	    
 	        int start=0,end=0;
-	        HashMap<Integer,Integer> mp=new HashMap<>();
+	        //HashMap<Integer,Integer> mp=new HashMap<>();
+		    //instead of using map which will give log n complexity we can use list where all initialize with -1 at statring time
+		List<Integer> list=new ArrayList<>(n,-1);
 	        for(int i=0;i<n;i++)
 	        {
 	            //case 1 where prefSum=0
@@ -34,9 +37,10 @@ public class Main
 	                break;
 	            }else{
 	                int rem=prefSum[i];
-	                if(mp.containsKey(rem))
+	                //if(mp.containsKey(rem))
+			if(list.get(rem))
 	                {
-	                    start=mp.get(rem)+1;
+	                    start=list.get(rem)+1;
 	                    end=i;
 	                    break;
 	                }
