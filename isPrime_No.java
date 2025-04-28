@@ -17,3 +17,4 @@ public class Main
         System.out.println(isPrime(n));
     }
 }
+//time complexit is O(sqrt(n))
