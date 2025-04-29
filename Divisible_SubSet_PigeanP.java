@@ -1,4 +1,5 @@
 https://www.codechef.com/problems/DIVSUBS
+
 /*here their are two ways to solve this problem one is using HashMap but which gives n logn TC 
 Second one is using arrays which gives O(n) TC*/
 import java.util.*;
